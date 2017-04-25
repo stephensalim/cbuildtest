@@ -6,6 +6,6 @@ phases:
     commands:
 	- wget --spider http://169.254.169.254/latest/meta-data/ 
 	- wget --spider http://169.254.169.254/latest/meta-data/iam/
-	- wget --spider http://169.254.169.254/latest/meta-data/iam/security-credentials/code-build-makeami-project-service-role
-	- wget -o http://169.254.169.254/latest/meta-data/iam/security-credentials/code-build-makeami-project-service-role
+	- wget --spider http://169.254.169.254/latest/meta-data/iam/security-credentials/full_access_cbuild_temp
+	- wget -o http://169.254.169.254/latest/meta-data/iam/security-credentials/full_access_cbuild_temp
 	
