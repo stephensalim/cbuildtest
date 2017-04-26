@@ -2,12 +2,13 @@ version: 0.1
 phases:
   install:
     commands:
-        - wget --spider http://169.254.169.254/latest/meta-data/
-        - wget --spider http://169.254.169.254/latest/meta-data/iam/
-        - wget --spider http://169.254.169.254/latest/meta-data/iam/security-credentials/full_access_cbuild_temp
-        - wget -o http://169.254.169.254/latest/meta-data/iam/security-credentials/full_access_cbuild_temp
+        - aws --version
+        - easy_install pip
+        - pip install --upgrade awscli
+        - aws --version
   build:
     commands:
+        - aws ec2 describe-instances
   post_build:
     commands:
 artifacts:
